@@ -1,8 +1,6 @@
 import { ThemeContext } from "@/providers/ThemeProvider";
 import { useContext } from "react";
 
-export type ThemeType = "light" | "dark";
-
 export const useTheme = () => {
   const context = useContext(ThemeContext);
 
