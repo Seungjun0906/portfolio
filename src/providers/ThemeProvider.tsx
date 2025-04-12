@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useState } from "react";
-import { lightTheme, darkTheme } from "@styles/theme.css";
-import { WebStorageService } from "@services/WebStorageService";
+import { lightTheme, darkTheme } from "@/styles/theme.css";
+import { WebStorageService } from "@/services/WebStorageService";
 
 type ThemeType = "light" | "dark";
 
