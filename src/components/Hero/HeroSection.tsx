@@ -10,7 +10,7 @@ import SpaceBackground from "./SpaceBackground";
 gsap.registerPlugin(TextPlugin);
 
 export const HeroSection = () => {
-  const containerRef = useRef<HTMLElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const nameRef = useRef<HTMLHeadingElement>(null);
   const roleRef = useRef<HTMLHeadingElement>(null);
   const sloganRef = useRef<HTMLParagraphElement>(null);
@@ -81,20 +81,13 @@ export const HeroSection = () => {
   }, [currentSlogan, slogans]);
 
   return (
-    <section className={styles.heroSection} ref={containerRef}>
-      {/* 인터랙티브 배경 */}
+    <div className={styles.heroSection} ref={containerRef}>
       <div className={styles.backgroundCanvas}>
         <Canvas
           camera={{ position: [0, 0, 5], fov: 75 }}
           onPointerMove={() => {}}
         >
           <SpaceBackground />
-
-          {/* 라이트 확인용 테스트 메쉬 */}
-          <mesh position={[0, 0, 0]}>
-            <sphereGeometry args={[0.5, 32, 32]} />
-            <meshStandardMaterial color="yellow" />
-          </mesh>
         </Canvas>
       </div>
 
@@ -117,6 +110,6 @@ export const HeroSection = () => {
         <span>Scroll Down</span>
         <div className={styles.scrollArrow}>↓</div>
       </div>
-    </section>
+    </div>
   );
 };
