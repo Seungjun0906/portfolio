@@ -16,8 +16,6 @@ const Starfield = () => {
     return pos;
   }, []);
 
-  console.log(positions);
-
   useFrame(({ clock }) => {
     if (ref.current) {
       ref.current.rotation.y = clock.getElapsedTime() * 0.05;
