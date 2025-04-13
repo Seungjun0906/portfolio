@@ -24,9 +24,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "@styles/*": ["src/styles/*"],
+      "@app/*": ["src/app/*"],
+      "@styles/*": ["src/app/lib/styles/*"],
       "@providers/*": ["src/providers/*"],
-      "@services/*": ["src/services/*"]
+      "@services/*": ["src/app/lib/services/*"]
     }
   },
   "include": [

@@ -1,5 +1,6 @@
-import { globalFontFace, style } from "@vanilla-extract/css";
 import { createTheme } from "@vanilla-extract/css";
+import { createThemeContract } from "@vanilla-extract/css";
+import { globalFontFace } from "@vanilla-extract/css";
 
 export const aleo = "Aleo";
 
@@ -26,9 +27,6 @@ globalFontFace(aleo, [
   },
 ]);
 
-// styles/contracts/typographyVars.css.ts
-import { createThemeContract } from "@vanilla-extract/css";
-
 export const typographyVars = createThemeContract({
   fontFamily: {
     display: "font-family-display",
@@ -36,6 +34,8 @@ export const typographyVars = createThemeContract({
   size: {
     display1: "font-size-display1",
     display2: "font-size-display2",
+    display3: "font-size-display3",
+    display4: "font-size-display4",
     headline1: "font-size-headline1",
     headline2: "font-size-headline2",
     subtitle1: "font-size-subtitle1",
@@ -47,6 +47,8 @@ export const typographyVars = createThemeContract({
   lineHeight: {
     display1: "line-height-display1",
     display2: "line-height-display2",
+    display3: "line-height-display3",
+    display4: "line-height-display4",
     headline1: "line-height-headline1",
     headline2: "line-height-headline2",
     subtitle1: "line-height-subtitle1",
@@ -58,6 +60,8 @@ export const typographyVars = createThemeContract({
   letterSpacing: {
     display1: "letter-spacing-display1",
     display2: "letter-spacing-display2",
+    display3: "letter-spacing-display3",
+    display4: "letter-spacing-display4",
     headline1: "letter-spacing-headline1",
     headline2: "letter-spacing-headline2",
     subtitle1: "letter-spacing-subtitle1",
@@ -69,6 +73,8 @@ export const typographyVars = createThemeContract({
   weight: {
     display1: "font-weight-display1",
     display2: "font-weight-display2",
+    display3: "font-weight-display3",
+    display4: "font-weight-display4",
     headline1: "font-weight-headline1",
     headline2: "font-weight-headline2",
     subtitle1: "font-weight-subtitle1",
@@ -87,6 +93,8 @@ export const typographyTheme = createTheme(typographyVars, {
   size: {
     display1: "56px",
     display2: "48px",
+    display3: "40px",
+    display4: "36px",
     headline1: "32px",
     headline2: "28px",
     subtitle1: "20px",
@@ -98,6 +106,8 @@ export const typographyTheme = createTheme(typographyVars, {
   lineHeight: {
     display1: "72px",
     display2: "64px",
+    display3: "56px",
+    display4: "48px",
     headline1: "48px",
     headline2: "42px",
     subtitle1: "32px",
@@ -109,6 +119,8 @@ export const typographyTheme = createTheme(typographyVars, {
   letterSpacing: {
     display1: "-0.04em",
     display2: "-0.035em",
+    display3: "-0.03em",
+    display4: "-0.02em",
     headline1: "-0.03em",
     headline2: "-0.02em",
     subtitle1: "-0.015em",
@@ -120,6 +132,8 @@ export const typographyTheme = createTheme(typographyVars, {
   weight: {
     display1: "700",
     display2: "700",
+    display3: "700",
+    display4: "700",
     headline1: "700",
     headline2: "600",
     subtitle1: "600",
@@ -130,99 +144,3 @@ export const typographyTheme = createTheme(typographyVars, {
   },
   featureSettings: `"calt" 1, "liga" 1, "kern" 1`,
 });
-
-// const fontFeatureSettings = `'case' on, 'cpsp' on, 'salt' on, 'ss01' on, 'ss02' on, 'ss03' on, 'ss05' on, 'ss06' on,
-//   'ss07' on, 'ss08' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv05' on, 'cv07' on, 'cv08' on, 'cv09' on,
-//   'cv10' on, 'cv11' on, 'cv12' on`;
-
-// export const display1 = style({
-//   fontWeight: 700,
-//   fontSize: "56px",
-//   lineHeight: "72px",
-//   letterSpacing: "-0.04em",
-//   fontFamily: `${aleo}, serif`,
-//   fontFeatureSettings,
-// });
-
-// export const display2 = style({
-//   fontWeight: 700,
-//   fontSize: "48px",
-//   lineHeight: "64px",
-//   letterSpacing: "-0.035em",
-//   fontFamily: `${aleo}, serif`,
-//   fontFeatureSettings,
-// });
-
-// export const headline1 = style({
-//   fontWeight: 700,
-//   fontSize: "32px",
-//   lineHeight: "48px",
-//   letterSpacing: "-0.03em",
-//   fontFamily: `${aleo}, serif`,
-//   fontFeatureSettings,
-// });
-
-// export const headline2 = style({
-//   fontWeight: 600,
-//   fontSize: "28px",
-//   lineHeight: "42px",
-//   letterSpacing: "-0.02em",
-//   fontFamily: `${aleo}, serif`,
-//   fontFeatureSettings,
-// });
-
-// export const subtitle1 = style({
-//   fontWeight: 600,
-//   fontSize: "20px",
-//   lineHeight: "32px",
-//   letterSpacing: "-0.015em",
-//   fontFamily: `${aleo}, serif`,
-//   fontFeatureSettings,
-// });
-
-// export const subtitle2 = style({
-//   fontWeight: 500,
-//   fontSize: "18px",
-//   lineHeight: "28px",
-//   letterSpacing: "-0.01em",
-//   fontFamily: `${aleo}, serif`,
-//   fontFeatureSettings,
-// });
-
-// export const body1 = style({
-//   fontWeight: 400,
-//   fontSize: "16px",
-//   lineHeight: "24px",
-//   letterSpacing: "0em",
-//   fontFamily: `${aleo}, serif`,
-//   fontFeatureSettings,
-// });
-
-// export const body2 = style({
-//   fontWeight: 400,
-//   fontSize: "14px",
-//   lineHeight: "20px",
-//   letterSpacing: "0em",
-//   fontFamily: `${aleo}, serif`,
-//   fontFeatureSettings,
-// });
-
-// export const caption = style({
-//   fontWeight: 400,
-//   fontSize: "12px",
-//   lineHeight: "16px",
-//   letterSpacing: "0.01em",
-//   fontFamily: `${aleo}, serif`,
-//   fontFeatureSettings,
-// });
-
-
-export const makeTypographyStyle = (level: keyof typeof typographyVars.size) =>
-  style({
-    fontFamily: typographyVars.fontFamily.display,
-    fontSize: typographyVars.size[level],
-    fontWeight: typographyVars.weight[level],
-    lineHeight: typographyVars.lineHeight[level],
-    letterSpacing: typographyVars.letterSpacing[level],
-    fontFeatureSettings: typographyVars.featureSettings,
-  });
