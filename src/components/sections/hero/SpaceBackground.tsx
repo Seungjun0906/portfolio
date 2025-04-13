@@ -1,10 +1,9 @@
-// Starfield.tsx
 import { useMemo, useRef } from "react";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
 
-const Starfield = () => {
+const SpaceBackground = () => {
   const ref = useRef<THREE.Points>(null);
   const count = 5000;
 
@@ -36,4 +35,4 @@ const Starfield = () => {
   );
 };
 
-export default Starfield;
+export default SpaceBackground;

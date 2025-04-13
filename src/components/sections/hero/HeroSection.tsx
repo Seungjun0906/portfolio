@@ -82,15 +82,6 @@ export const HeroSection = () => {
 
   return (
     <div className={styles.heroSection} ref={containerRef}>
-      <div className={styles.backgroundCanvas}>
-        <Canvas
-          camera={{ position: [0, 0, 5], fov: 75 }}
-          onPointerMove={() => {}}
-        >
-          <SpaceBackground />
-        </Canvas>
-      </div>
-
       <div className={styles.heroContent}>
         <div className={styles.textContent}>
           <p ref={nameRef} className={styles.mainHeading}>

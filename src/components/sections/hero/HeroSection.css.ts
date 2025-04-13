@@ -24,16 +24,6 @@ export const heroSection = responsiveStyle({
   },
 });
 
-export const backgroundCanvas = style({
-  position: "absolute",
-  top: 0,
-  left: 0,
-  width: "100%",
-  height: "100%",
-  zIndex: 1,
-  background: themeVars.color.black,
-});
-
 export const heroContent = responsiveStyle({
   base: {
     display: "flex",

@@ -38,13 +38,13 @@ export const FullPageLayout = ({ children }: { children: ReactNode }) => {
   }, [lenis]);
 
   return (
-    <div
+    <main
       ref={containerRef}
       style={{
         height: "auto",
       }}
     >
       {children}
-    </div>
+    </main>
   );
 };
