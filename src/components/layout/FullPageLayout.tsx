@@ -1,7 +1,7 @@
 import { useScroll } from "@/providers/ScrollProvider";
 import { ReactNode, useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import MouseTrailProvider from "@/providers/MouseTrailProvider";
+import gsap from "gsap";
 
 export const FullPageLayout = ({ children }: { children: ReactNode }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -15,11 +15,20 @@ export const FullPageLayout = ({ children }: { children: ReactNode }) => {
     sections.forEach((section, i) => {
       ScrollTrigger.create({
         trigger: section,
-        start: "top top",
-        end: "bottom top",
-        onEnter: () => lenis?.scrollTo(section, { immediate: false }),
-        onEnterBack: () => lenis?.scrollTo(section, { immediate: false }),
-        markers: false,
+        start: "top 65%",
+        end: "bottom 30%",
+        onEnter: () =>
+          lenis?.scrollTo(section, {
+            offset: 0,
+            duration: 1.0,
+            immediate: false,
+          }),
+        onEnterBack: () =>
+          lenis?.scrollTo(section, {
+            offset: 0,
+            duration: 1.0,
+            immediate: false,
+          }),
       });
     });
 
@@ -28,5 +37,14 @@ export const FullPageLayout = ({ children }: { children: ReactNode }) => {
     };
   }, [lenis]);
 
-  return <div>{children}</div>;
+  return (
+    <div
+      ref={containerRef}
+      style={{
+        height: "auto",
+      }}
+    >
+      {children}
+    </div>
+  );
 };
