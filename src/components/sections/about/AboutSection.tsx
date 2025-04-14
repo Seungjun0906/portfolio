@@ -2,6 +2,7 @@ import { useRef } from "react";
 import * as styles from "./AboutSection.css";
 import TechBadge from "./TechBadge";
 import { motion } from "framer-motion";
+import SectionTitle from "@/components/shared/SectionTitle";
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -47,15 +48,7 @@ const AboutSection = () => {
   return (
     <div className={styles.container} ref={sectionRef}>
       <div className={styles.content}>
-        <motion.div
-          className={styles.header}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className={styles.title}>About Me</h2>
-        </motion.div>
+        <SectionTitle title="About Me" />
 
         <motion.div
           className={styles.bio}
