@@ -4,8 +4,9 @@ import { ThemeToggle } from "@/components/themeToggle/ThemeToggle";
 
 import * as styles from "./Home.css";
 import AboutSection from "@/components/sections/about/AboutSection";
-import { useTheme } from "@/providers/ThemeProvider";
 import ExperienceSection from "@/components/sections/experience/ExperienceSection";
+import { ProjectSection } from "@/components/sections/project/ProjectSection";
+import ContactSection from "@/components/sections/contact/ContactSection";
 
 const Home = () => {
   return (
@@ -28,19 +29,16 @@ const Home = () => {
       </section>
 
       {/* 컨텍스트 섹션 */}
-      <section
-        className="section"
-        style={{
-          height: "100dvh",
-        }}
-      >
-        <div>섹션 3</div>
+      <section className="section">
+        <ProjectSection />
+      </section>
+
+      {/* 컨텍스트 섹션 */}
+      <section className="section">
+        <ContactSection />
       </section>
     </FullPageLayout>
   );
 };
 
 export default Home;
-function useEffect(arg0: () => void, arg1: any[]) {
-  throw new Error("Function not implemented.");
-}

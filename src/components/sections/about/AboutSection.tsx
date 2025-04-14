@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import * as styles from "./AboutSection.css";
-import TechBadge from "./TechBadge";
+
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/shared/SectionTitle";
 import StackIcon from "tech-stack-icons";
@@ -189,23 +189,6 @@ const AboutSection = () => {
               ))}
             </div>
           </div>
-        </motion.div>
-
-        <motion.div
-          className={styles.resumeLink}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <a
-            href="/src/assets/resume_kr.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.downloadButton}
-          >
-            이력서 보기
-          </a>
         </motion.div>
       </div>
     </div>
