@@ -11,6 +11,26 @@ globalStyle("body", {
   margin: 0,
 });
 
+// Hide scrollbar on both html and body
+globalStyle("html, body", {
+  overflow: "auto",
+  scrollbarWidth: "none",
+  msOverflowStyle: "none",
+  scrollSnapType: "y mandatory",
+});
+
+globalStyle(".section", {
+  scrollSnapAlign: "start",
+});
+
+globalStyle("html::-webkit-scrollbar", {
+  display: "none",
+});
+
+globalStyle("body::-webkit-scrollbar", {
+  display: "none",
+});
+
 // Anchor hover effect
 globalStyle("a:hover", {
   textDecoration: "underline",

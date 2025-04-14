@@ -124,7 +124,7 @@ export const lightTheme = createTheme(themeVars.colorByTheme, {
     60: "#555452",
     70: "#030303", // your darkest
   },
-  background: "#f1efec",
+  background: "#e1e9f5",
   surface: "#ffffff",
   text: {
     primary: "#030303", // 가장 강조되는 텍스트

@@ -44,7 +44,7 @@ export const textContent = responsiveStyle({
     padding: "2rem",
     borderRadius: "1rem",
     backdropFilter: "blur(5px)",
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backgroundColor: "rgba(76, 73, 73, 0.1)",
     boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
   },
   md: {
@@ -56,7 +56,8 @@ export const textContent = responsiveStyle({
 export const mainHeading = style([
   responsiveStyle({
     base: {
-      color: themeVars.color.grayscale[20],
+      // color: themeVars.color.grayscale[20],
+      color: themeVars.colorByTheme.text.medium,
       ...createTypographyStyle("display2"),
     },
     md: {
@@ -68,11 +69,11 @@ export const mainHeading = style([
 export const subHeading = style([
   responsiveStyle({
     base: {
-      color: themeVars.color.grayscale[50],
-      ...createTypographyStyle("display3"),
+      color: themeVars.colorByTheme.text.muted,
+      ...createTypographyStyle("display4"),
     },
     md: {
-      ...createTypographyStyle("display2"),
+      ...createTypographyStyle("display3"),
     },
   }),
 ]);
@@ -80,7 +81,7 @@ export const subHeading = style([
 export const slogan = style([
   responsiveStyle({
     base: {
-      color: themeVars.color.blue[30],
+      color: themeVars.colorByTheme.primary[60],
       ...createTypographyStyle("headline2"),
     },
   }),
@@ -94,7 +95,7 @@ export const scrollIndicator = style({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  color: themeVars.color.grayscale[10],
+  color: themeVars.colorByTheme.text.surface,
   zIndex: 2,
   ...createTypographyStyle("body1"),
 });

@@ -43,6 +43,11 @@ export const typographyVars = createThemeContract({
     body1: "font-size-body1",
     body2: "font-size-body2",
     caption: "font-size-caption",
+    // Add badge sizes
+    badge1: "font-size-badge1",
+    badge2: "font-size-badge2",
+    badge3: "font-size-badge3",
+    badge4: "font-size-badge4",
   },
   lineHeight: {
     display1: "line-height-display1",
@@ -56,6 +61,11 @@ export const typographyVars = createThemeContract({
     body1: "line-height-body1",
     body2: "line-height-body2",
     caption: "line-height-caption",
+    // Add badge line heights
+    badge1: "line-height-badge1",
+    badge2: "line-height-badge2",
+    badge3: "line-height-badge3",
+    badge4: "line-height-badge4",
   },
   letterSpacing: {
     display1: "letter-spacing-display1",
@@ -69,6 +79,11 @@ export const typographyVars = createThemeContract({
     body1: "letter-spacing-body1",
     body2: "letter-spacing-body2",
     caption: "letter-spacing-caption",
+    // Add badge letter spacings
+    badge1: "letter-spacing-badge1",
+    badge2: "letter-spacing-badge2",
+    badge3: "letter-spacing-badge3",
+    badge4: "letter-spacing-badge4",
   },
   weight: {
     display1: "font-weight-display1",
@@ -82,6 +97,11 @@ export const typographyVars = createThemeContract({
     body1: "font-weight-body1",
     body2: "font-weight-body2",
     caption: "font-weight-caption",
+    // Add badge weights
+    badge1: "font-weight-badge1",
+    badge2: "font-weight-badge2",
+    badge3: "font-weight-badge3",
+    badge4: "font-weight-badge4",
   },
   featureSettings: "font-feature-settings",
 });
@@ -102,6 +122,11 @@ export const typographyTheme = createTheme(typographyVars, {
     body1: "16px",
     body2: "14px",
     caption: "12px",
+    // Badge sizes based on TechBadge styling
+    badge1: "0.9rem", // Based on TechBadge fontSize
+    badge2: "0.8rem",
+    badge3: "0.75rem",
+    badge4: "0.7rem",
   },
   lineHeight: {
     display1: "72px",
@@ -115,6 +140,11 @@ export const typographyTheme = createTheme(typographyVars, {
     body1: "24px",
     body2: "20px",
     caption: "16px",
+    // Badge line heights
+    badge1: "1.2",
+    badge2: "1.2",
+    badge3: "1.2",
+    badge4: "1.2",
   },
   letterSpacing: {
     display1: "-0.04em",
@@ -128,6 +158,11 @@ export const typographyTheme = createTheme(typographyVars, {
     body1: "0em",
     body2: "0em",
     caption: "0.01em",
+    // Badge letter spacings
+    badge1: "0.01em",
+    badge2: "0.01em",
+    badge3: "0.01em",
+    badge4: "0.01em",
   },
   weight: {
     display1: "700",
@@ -141,6 +176,11 @@ export const typographyTheme = createTheme(typographyVars, {
     body1: "400",
     body2: "400",
     caption: "400",
+    // Badge weights - based on TechBadge's "bold" fontWeight
+    badge1: "700",
+    badge2: "700",
+    badge3: "600",
+    badge4: "600",
   },
   featureSettings: `"calt" 1, "liga" 1, "kern" 1`,
 });

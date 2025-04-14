@@ -15,8 +15,8 @@ export const FullPageLayout = ({ children }: { children: ReactNode }) => {
     sections.forEach((section, i) => {
       ScrollTrigger.create({
         trigger: section,
-        start: "top 65%",
-        end: "bottom 30%",
+        start: "top 90%",
+        end: "bottom 10%",
         onEnter: () =>
           lenis?.scrollTo(section, {
             offset: 0,
@@ -27,7 +27,6 @@ export const FullPageLayout = ({ children }: { children: ReactNode }) => {
           lenis?.scrollTo(section, {
             offset: 0,
             duration: 1.0,
-            immediate: false,
           }),
       });
     });
@@ -37,14 +36,5 @@ export const FullPageLayout = ({ children }: { children: ReactNode }) => {
     };
   }, [lenis]);
 
-  return (
-    <main
-      ref={containerRef}
-      style={{
-        height: "auto",
-      }}
-    >
-      {children}
-    </main>
-  );
+  return <main ref={containerRef}>{children}</main>;
 };

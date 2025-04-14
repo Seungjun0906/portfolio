@@ -1,5 +1,12 @@
 import { style } from "@vanilla-extract/css";
 
+export const ThemeToggleContainer = style({
+  position: "fixed",
+  top: 20,
+  right: 20,
+  zIndex: 200,
+});
+
 export const background = style({
   position: "fixed",
   top: 0,

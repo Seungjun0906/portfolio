@@ -10,6 +10,7 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./routes.tsx";
 import { ScrollProvider } from "@/providers/ScrollProvider.tsx";
 import MouseTrailProvider from "@/providers/MouseTrailProvider.tsx";
+import { BackgroundProvider } from "@/providers/BackgroundProvider.tsx";
 
 const savedTheme = WebStorageService.getInstance().get("theme");
 document.body.classList.add(savedTheme === "dark" ? darkTheme : lightTheme);
@@ -17,11 +18,13 @@ document.body.classList.add(savedTheme === "dark" ? darkTheme : lightTheme);
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
-      <ScrollProvider>
-        <MouseTrailProvider>
-          <RouterProvider router={router} />
-        </MouseTrailProvider>
-      </ScrollProvider>
+      <BackgroundProvider>
+        <ScrollProvider>
+          <MouseTrailProvider>
+            <RouterProvider router={router} />
+          </MouseTrailProvider>
+        </ScrollProvider>
+      </BackgroundProvider>
     </ThemeProvider>
   </StrictMode>
 );
