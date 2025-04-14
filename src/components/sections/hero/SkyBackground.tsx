@@ -8,7 +8,12 @@ export const SimpleSkyFallback = () => {
 };
 
 const SkyBackground = () => {
-  return <Environment files="/hdr/kloppenheim_06_puresky_1k.hdr" background />;
+  return (
+    <Environment
+      files={`${import.meta.env.BASE_URL}hdr/kloppenheim_06_puresky_1k.hdr`}
+      background
+    />
+  );
 };
 
 export default SkyBackground;

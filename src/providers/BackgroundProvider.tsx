@@ -12,7 +12,9 @@ const Preloader = ({ onLoaded }: { onLoaded: () => void }) => {
       try {
         // HDR 파일 미리 로드
         await Promise.all([
-          fetch("/hdr/kloppenheim_06_puresky_1k.hdr").then((res) => res.blob()),
+          fetch(
+            `${import.meta.env.BASE_URL}hdr/kloppenheim_06_puresky_1k.hdr`
+          ).then((res) => res.blob()),
         ]);
 
         onLoaded();
