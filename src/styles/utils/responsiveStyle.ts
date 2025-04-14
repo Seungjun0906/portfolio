@@ -9,9 +9,7 @@ type Responsive<T> = {
   xl?: T;
 };
 
-export function responsiveStyle<T extends Record<string, any>>(
-  styles: Responsive<StyleRule>
-) {
+export function responsiveStyle(styles: Responsive<StyleRule>) {
   const base = styles.base ?? {};
   const queries: Record<string, any> = {};
 
