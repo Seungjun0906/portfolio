@@ -3,47 +3,35 @@ import * as styles from "./AboutSection.css";
 import TechBadge from "./TechBadge";
 import { motion } from "framer-motion";
 import SectionTitle from "@/components/shared/SectionTitle";
+import StackIcon from "tech-stack-icons";
+import { useTheme } from "@/providers/ThemeProvider";
 
 const AboutSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { isDark } = useTheme();
 
   const frontendTechs = [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "React Query",
-    "Jotai",
-    "Redux Toolkit",
-    "Tailwind CSS",
-    "Styled-components",
+    "nextjs2",
+    "reactjs",
+    "typescript",
+    "reactquery",
+    "redux",
+    "tailwindcss",
+    "js",
   ];
 
   const backendTechs = [
-    "Node.js",
-    "Express.js",
-    "Nest.js",
-    "Python",
-    "FastAPI",
-    "SQLAlchemy",
-    "PostgreSQL",
+    "nodejs",
+    "nestjs",
+    "gcloud",
+    "aws",
+    "postgresql",
+    "docker",
   ];
 
-  const devOpsTechs = [
-    "Google Cloud Run",
-    "Google Cloud Build",
-    "Docker",
-    "AWS Lambda",
-    "EC2",
-  ];
+  const mobileTechs = ["flutter", "dart"];
 
-  const mobileTechs = ["Flutter", "Dart", "RiverPod", "ShoreBird"];
-
-  const otherTechs = [
-    "SEO",
-    "Google Search Console",
-    "Hotjar",
-    "Google Analytics",
-  ];
+  const Tools = ["hotjar", "analytics"];
 
   return (
     <div className={styles.container} ref={sectionRef}>
@@ -84,120 +72,121 @@ const AboutSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <h3 className={styles.techTitle}>기술 스택 및 tool 활용</h3>
+          <p className={styles.techTitle}>Tech Stack & Tools</p>
 
-          <div className={styles.techCategory}>
-            <h4 className={styles.categoryTitle}>Frontend</h4>
-            <div className={styles.techBadges}>
-              <div className={styles.badgesContainer}>
-                {frontendTechs.map((tech, index) => (
-                  <motion.div
-                    key={index}
-                    className={styles.badgeWrapper}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.1 * index,
+          <div>
+            <p className={styles.categoryTitle}>Frontend</p>
+            <div className={styles.badgesContainer}>
+              {frontendTechs.map((tech, idx) => (
+                <motion.div
+                  key={`${tech}-${idx}`}
+                  className={
+                    isDark ? styles.badgeWrapperDark : styles.badgeWrapperLight
+                  }
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.1 * idx,
+                  }}
+                >
+                  <StackIcon
+                    name={tech}
+                    style={{
+                      width: 40,
+                      height: 40,
                     }}
-                  >
-                    <TechBadge name={tech} />
-                  </motion.div>
-                ))}
-              </div>
+                  />
+                </motion.div>
+              ))}
             </div>
           </div>
 
-          <div className={styles.techCategory}>
-            <h4 className={styles.categoryTitle}>Backend</h4>
-            <div className={styles.techBadges}>
-              <div className={styles.badgesContainer}>
-                {backendTechs.map((tech, index) => (
-                  <motion.div
-                    key={index}
-                    className={styles.badgeWrapper}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.1 * index,
+          <div>
+            <p className={styles.categoryTitle}>Backend</p>
+            <div className={styles.badgesContainer}>
+              {backendTechs.map((tech, idx) => (
+                <motion.div
+                  key={idx}
+                  className={
+                    isDark ? styles.badgeWrapperDark : styles.badgeWrapperLight
+                  }
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.1 * idx,
+                  }}
+                >
+                  <StackIcon
+                    name={tech}
+                    style={{
+                      width: 40,
+                      height: 40,
                     }}
-                  >
-                    <TechBadge name={tech} />
-                  </motion.div>
-                ))}
-              </div>
+                  />
+                </motion.div>
+              ))}
             </div>
           </div>
 
-          <div className={styles.techCategory}>
-            <h4 className={styles.categoryTitle}>DevOps & Infrastructure</h4>
-            <div className={styles.techBadges}>
-              <div className={styles.badgesContainer}>
-                {devOpsTechs.map((tech, index) => (
-                  <motion.div
-                    key={index}
-                    className={styles.badgeWrapper}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.1 * index,
+          <div>
+            <p className={styles.categoryTitle}>Mobile</p>
+            <div className={styles.badgesContainer}>
+              {mobileTechs.map((tech, idx) => (
+                <motion.div
+                  key={`${tech}-${idx}`}
+                  className={
+                    isDark ? styles.badgeWrapperDark : styles.badgeWrapperLight
+                  }
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.1 * idx,
+                  }}
+                >
+                  <StackIcon
+                    name={tech}
+                    style={{
+                      width: 40,
+                      height: 40,
                     }}
-                  >
-                    <TechBadge name={tech} />
-                  </motion.div>
-                ))}
-              </div>
+                  />
+                </motion.div>
+              ))}
             </div>
           </div>
 
-          <div className={styles.techCategory}>
-            <h4 className={styles.categoryTitle}>Mobile</h4>
-            <div className={styles.techBadges}>
-              <div className={styles.badgesContainer}>
-                {mobileTechs.map((tech, index) => (
-                  <motion.div
-                    key={index}
-                    className={styles.badgeWrapper}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.1 * index,
+          <div>
+            <p className={styles.categoryTitle}>Tools</p>
+            <div className={styles.badgesContainer}>
+              {Tools.map((tech, idx) => (
+                <motion.div
+                  key={`${tech}-${idx}`}
+                  className={
+                    isDark ? styles.badgeWrapperDark : styles.badgeWrapperLight
+                  }
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.1 * idx,
+                  }}
+                >
+                  <StackIcon
+                    name={tech}
+                    style={{
+                      width: 40,
+                      height: 40,
                     }}
-                  >
-                    <TechBadge name={tech} />
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.techCategory}>
-            <h4 className={styles.categoryTitle}>Other</h4>
-            <div className={styles.techBadges}>
-              <div className={styles.badgesContainer}>
-                {otherTechs.map((tech, index) => (
-                  <motion.div
-                    key={index}
-                    className={styles.badgeWrapper}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.1 * index,
-                    }}
-                  >
-                    <TechBadge name={tech} />
-                  </motion.div>
-                ))}
-              </div>
+                  />
+                </motion.div>
+              ))}
             </div>
           </div>
         </motion.div>

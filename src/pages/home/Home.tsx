@@ -5,6 +5,7 @@ import { ThemeToggle } from "@/components/themeToggle/ThemeToggle";
 import * as styles from "./Home.css";
 import AboutSection from "@/components/sections/about/AboutSection";
 import { useTheme } from "@/providers/ThemeProvider";
+import ExperienceSection from "@/components/sections/experience/ExperienceSection";
 
 const Home = () => {
   return (
@@ -22,13 +23,8 @@ const Home = () => {
       </section>
 
       {/* 프로젝트 소개 섹션 */}
-      <section
-        className="section"
-        style={{
-          height: "100dvh",
-        }}
-      >
-        <div>섹션 2</div>
+      <section className="section">
+        <ExperienceSection />
       </section>
 
       {/* 컨텍스트 섹션 */}

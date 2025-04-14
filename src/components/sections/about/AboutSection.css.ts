@@ -41,7 +41,6 @@ export const bio = style([
 ]);
 
 export const techSection = style({
-  marginTop: "2rem",
   display: "flex",
   flexDirection: "column",
   gap: "2rem",
@@ -58,21 +57,14 @@ export const techTitle = style([
   }),
 ]);
 
-export const techCategory = style([
-  responsiveStyle({
-    base: {
-      marginBottom: "2rem",
-    },
-  }),
-]);
-
 export const categoryTitle = style([
   responsiveStyle({
     base: {
-      color: themeVars.colorByTheme.primary[50],
+      marginTop: 12,
+      color: themeVars.colorByTheme.text.primary,
       ...createTypographyStyle("headline2"),
-      marginBottom: "1rem",
-      borderLeft: `4px solid ${themeVars.colorByTheme.primary[50]}`,
+      marginBottom: 0,
+      borderLeft: `4px solid ${themeVars.colorByTheme.text.primary}`,
       paddingLeft: "0.75rem",
     },
   }),
@@ -93,12 +85,21 @@ export const badgesContainer = responsiveStyle({
   },
 });
 
-export const badgeWrapper = style({
+export const badgeWrapperDark = style({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  width: "160px",
-  height: "50px",
+  justifyContent: "center",
+  backdropFilter: "blur(5px)",
+  backgroundColor: "rgba(255, 255, 255, 0.42)",
+  borderRadius: "1rem",
+  padding: "0.5rem",
+});
+
+export const badgeWrapperLight = style({
+  backdropFilter: "blur(5px)",
+  borderRadius: "1rem",
+  padding: "0.5rem",
 });
 
 export const resumeLink = style({
