@@ -3,8 +3,6 @@ import { useRef, useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import * as styles from "./HeroSection.css";
-import { Canvas } from "@react-three/fiber";
-import SpaceBackground from "./SpaceBackground";
 
 // GSAP 플러그인 등록
 gsap.registerPlugin(TextPlugin);

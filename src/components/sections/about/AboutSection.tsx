@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import * as styles from "./AboutSection.css";
 import TechBadge from "./TechBadge";
 import { motion } from "framer-motion";
