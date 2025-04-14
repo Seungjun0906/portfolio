@@ -12,7 +12,7 @@ export const FullPageLayout = ({ children }: { children: ReactNode }) => {
 
     const sections = gsap.utils.toArray<HTMLElement>(".section");
 
-    sections.forEach((section, i) => {
+    sections.forEach((section) => {
       ScrollTrigger.create({
         trigger: section,
         start: "top 90%",
