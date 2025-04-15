@@ -1,7 +1,7 @@
-import { useScroll } from "@/providers/ScrollProvider";
-import { ReactNode, useEffect, useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gsap from "gsap";
+// import { useScroll } from "@/providers/ScrollProvider";
+import { ReactNode, useRef } from "react";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import gsap from "gsap";
 
 export const FullPageLayout = ({ children }: { children: ReactNode }) => {
   const containerRef = useRef<HTMLDivElement>(null);
