@@ -53,6 +53,7 @@ export const BackgroundProvider = ({
           {children}
         </>
       ) : (
+        // 로딩 처리 보완 필요
         <div>Loading...</div>
       )}
     </>
